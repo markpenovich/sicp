@@ -37,3 +37,10 @@
 (newline)
 (display circumference)
 (newline)
+; 1.4
+(define (square x) (* x x))
+(display (square 21))
+(newline)
+(display (square (+ 2 5)))
+(newline)
+(display (square (square 3)))
