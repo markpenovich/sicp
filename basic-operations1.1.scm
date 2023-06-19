@@ -47,7 +47,7 @@
 (newline)
 
 (define (sum-of-squares x y)
-  (+ (square x) (square y )))
+  (+ (square x) (square y)))
 (display (sum-of-squares 3 4))
 (newline)
 
@@ -55,3 +55,27 @@
   (sum-of-squares (+ a 1) (* a 2)))
 (display (f 5))
 (newline)
+; 1.6
+; First way to write absolute value
+(define (abs x)
+  (cond ((> x 0) x)
+	((= x 0) 0)
+	((< x 0) (-x))))
+
+; Another way to write absolute value
+(define (abs x)
+  (cond ((< x 0) (-x))
+	(else x)))
+
+; And another way to write absolute value
+; (if {predicate} {consequent} {alternative})
+(define (abs x)
+  (if (< x 0)
+      (- x)
+      x))
+; more predicates:
+; (and {e1} ... {en}) - special form
+; (or {e1} ... {en}) - special form
+; (not {e}) - ordinary procedure
+
+
